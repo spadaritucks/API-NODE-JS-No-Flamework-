@@ -1,12 +1,12 @@
 // router.js
-const { getAllUsers, getUserById, createUser, updateUser, deleteUser } = require('../controllers/UserController');
+const { getUsers, createUser, updateUser, deleteUser } = require('../controllers/UserController');
 
 const apiRoutes = (req, res) => {
   const { method, url } = req;
 
   // Rota GET para listar todos os usuários
   if (method === 'GET' && url === '/users') {
-    getAllUsers(req, res);
+    getUsers(req, res);
   }
 
   // Rota GET para buscar um usuário específico
